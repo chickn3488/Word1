@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>语句管理</title>
+</head>
+
+<body>
+    <h1>语句管理</h1>
+
+    <!-- 添加语句表单 -->
+    <h2>添加语句</h2>
+    <form id="addStatementForm">
+        <label for="category">分类:</label>
+        <input type="text" id="category" name="category"><br>
+        <label for="statement">语句内容:</label>
+        <textarea id="statement" name="statement" rows="4" cols="50"></textarea><br>
+        <input type="submit" value="添加">
+    </form>
+
+    <!-- 显示语句列表 -->
+    <h2>语句列表</h2>
+    <div id="statementList"></div>
+
+    <!-- 修改和删除语句表单 -->
+    <div id="modifyDeleteForm" style="display: none;">
+        <h2>修改/删除语句</h2>
+        <input type="hidden" id="statementId">
+        <label for="modifyCategory">分类:</label>
+        <input type="text" id="modifyCategory" name="modifyCategory"><br>
+        <label for="modifyStatement">语句内容:</label>
+        <textarea id="modifyStatement" name="modifyStatement" rows="4" cols="50"></textarea><br>
+        <button id="modifyButton">修改</button>
+        <button id="deleteButton">删除</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
